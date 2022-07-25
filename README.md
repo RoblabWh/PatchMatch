@@ -1,5 +1,6 @@
 # PatchMatch
-Additional material for the paper: "PatchMatch-Stereo-Panorama, a fast dense reconstruction from 360° video images"
+
+***Additional material for the paper: "PatchMatch-Stereo-Panorama, a fast dense reconstruction from 360° video images"***
 
 **Abstract** — This work deals with the creation of dense 3D reconstructions based on a 360° video in order to give autonomous
 robots a better possibility to find their way in their environment as well as to provide different forces in operations with a quick
