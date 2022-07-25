@@ -1,4 +1,4 @@
-# PatchMatch ![UAVs](./images/uavs-thumb.jpg)
+# PatchMatch 
 
 ***Additional material for the paper: "PatchMatch-Stereo-Panorama, a fast dense reconstruction from 360° video images"***
 
@@ -8,7 +8,7 @@ overview of the situation. For this purpose, an already existing visual SLAM met
 ORB-SLAM, is extended by a PatchMatch-Stereo-Panorama algorithm. Unlike other methods, this work does not convert
 the panoramic images into perspective methods, but works directly on the equirectangular projection. In order to operate
 in real time, a parallel propagation scheme was also developed to offload the computation to the GPU. The results were then
-compared with structure-from-motion and multi-view stereo methods and showed significant differences.
+compared with structure-from-motion and multi-view stereo methods and showed significant differences. ![UAVs](./images/uavs-thumb.jpg)
 
 **Keywords**: PatchMatch-Stereo, 360°-Panorama, visual monocular SLAM, UAV, Rescue Robotics
 
