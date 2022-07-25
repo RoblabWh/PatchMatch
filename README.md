@@ -35,5 +35,5 @@ Hartmut Surmann, Marc Thurow, Dominik Slomma:
 **PatchMatch-Stereo-Panorama, a fast dense reconstruction from 360° video images**, 7 / 2022
 
 ## Credits: 
-* OrbSLAM 
-* OpenSLAM
+* OrbSLAM https://github.com/raulmur/ORB_SLAM2
+* OpenVSLAM https://dl.acm.org/doi/10.1145/3530839.3530849
