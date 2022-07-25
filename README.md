@@ -30,7 +30,7 @@ Dense mapping of a rescue env. in real time with a 360° camera on a small first
 360° Indoor panorama viewer based on the localization (similar to streetview). Red points a near blue point a far away. Essen Feb. 2022
 * [![EssenStreetview](./images/vid-thumb-7.png)](https://www.youtube.com/watch?v=iFE1kWW_jM4 "Essen 360 view")
 
-## cite:
+## Cite:
 Hartmut Surmann, Marc Thurow, Dominik Slomma: 
 **PatchMatch-Stereo-Panorama, a fast dense reconstruction from 360° video images**, 7 / 2022
 
