@@ -27,13 +27,17 @@ Deployment of Aerial Robots after a major fire of an industrial hall with hazard
 * [![Essen360](./images/vid-thumb-1.png)](https://www.youtube.com/watch?v=v=Pd2__gm0nUE "Essen flight 2 Minutes 360")
 
 3D point cloud of a rescue environment (after a fire). Essen Feb. 2022,  OpenVSLAM + cuda implementation of PatchMatch with equirectangular projection (360°). Interesting at 1:15
-* [![Essen360](./images/vid-thumb-2.png)](https://www.youtube.com/watch?v=mhlxL7Xpauc&t=75s "Essen dense point cloud")
+* [![Essenpcl](./images/vid-thumb-2.png)](https://www.youtube.com/watch?v=mhlxL7Xpauc&t=75s "Essen dense point cloud")
 
+Dense mapping of a rescue env. in real time with a 360° camera on a small first-person view drone. Watch out the localization and mapping in the tubes!
+* [![DRZMapping](./images/vid-thumb-4.png)](https://www.youtube.com/watch?v=_xzITKJRyek "DRZ mapping")
 
+360° Indoor panorama viewer based on the localization (similar to streetview). Red points a near blue point a far away. Essen Feb. 2022
+* [![EssenStreetview](./images/vid-thumb-7.png)](https://www.youtube.com/watch?v=iFE1kWW_jM4 "Essen 360 view")
 
 ## cite:
-Hartmut Surmann, Marc Thurow, Dominik Slomma
-**PatchMatch-Stereo-Panorama, a fast dense reconstruction from 360° video images**
+Hartmut Surmann, Marc Thurow, Dominik Slomma: 
+**PatchMatch-Stereo-Panorama, a fast dense reconstruction from 360° video images**, 7 / 2022
 
 ## Credits: 
 * OrbSLAM 
