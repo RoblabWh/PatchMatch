@@ -19,7 +19,7 @@ Deployment of Aerial Robots after a major fire of an industrial hall with hazard
 * [![3D point cloud DRZ](./images/vid-thumb-5.png)](https://www.youtube.com/watch?v=mR05-akD4BE&t=180s "Point cloud generation of an burned industrial hall")
 
 360° View of a short flight through a rescue environment (after a fire) with a DJI FPV and a Insta360 One X, Essen Feb. 2022. Quality is reduced from 5.7 K to 2 K (HD).
-* [![Essen360](./images/vid-thumb-1.png)](https://www.youtube.com/watch?v=v=Pd2__gm0nUE "Essen flight 2 Minutes 360")
+* [![Essen360](./images/vid-thumb-1.png)](https://www.youtube.com/watch?v=Pd2__gm0nUE "Essen flight 2 Minutes 360")
 
 3D point cloud of a rescue environment (after a fire). Essen Feb. 2022,  OpenVSLAM + cuda implementation of PatchMatch with equirectangular projection (360°). Interesting at 1:15
 * [![Essenpcl](./images/vid-thumb-2.png)](https://www.youtube.com/watch?v=mhlxL7Xpauc&t=75s "Essen dense point cloud")
