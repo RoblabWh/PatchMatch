@@ -1,0 +1,44 @@
+# Equirectangular model for Insta360
+
+#==============#
+# Camera Model #
+#==============#
+
+Camera.name: "Insta360"
+Camera.setup: "monocular"
+Camera.model: "equirectangular"
+
+Camera.fps: 30.0
+Camera.cols: 1920
+Camera.rows: 960
+
+Camera.color_order: "RGB"
+
+#================#
+# ORB Parameters #
+#================#
+
+Feature.max_num_keypoints: 3000
+Feature.scale_factor: 1.2
+Feature.num_levels: 8
+Feature.ini_fast_threshold: 20
+Feature.min_fast_threshold: 7
+Feature.mask_rectangles:
+  - [0.0, 1.0, 0.0, 0.1]
+  - [0.0, 1.0, 0.84, 1.0]
+  - [0.0, 0.2, 0.7, 1.0]
+  - [0.8, 1.0, 0.7, 1.0]
+  
+
+#=======================#
+# Write keyframe images #
+#=======================#
+Images.WriteKeyfrmsImgsTo: "/data/example/patchmatch/output_keyframes"
+Images.TypeKeyfrmsImgs: 1 # 0 for png and 1 for jpg
+
+Dense.DepthmapWidth: 640
+Dense.DepthmapHeight: 320
+
+Dense.SameDepthThreshold: 0.08
+Dense.MinPatchSD: 0
+Dense.Iterations: 4

@@ -1,4 +1,26 @@
-# PatchMatch 
+<div align="center">
+	<a href="https://www.en.w-hs.de/">
+		<img align="left" src="images/w-hs_logo.png" height="70" alt="whs">
+	</a>
+	<a href="https://rettungsrobotik.de/en/home">
+		<img align="right" src="images/drz_logo.png" height="70" alt="drz">
+	</a>
+</div>
+<h1 align="center">PatchMatch</h1>
+<h1 align="center">PatchMatch-Stereo-Panorama, a fast dense reconstruction from 360° video images</h1>
+<p align="center">
+	<strong>Hartmut Surmann</strong>
+	·
+	<strong>Marc Thurow</strong>
+	·
+	<strong>Dominik Slomma</strong>
+</p>
+<h3 align="center">
+	<a href="https://arxiv.org/abs/2211.16266">Paper</a>
+</h3>
+<p align="center">
+	<img src="images/demo.gif" alt="" width="75%">
+</p>
 
 ***Additional material for the paper: "PatchMatch-Stereo-Panorama, a fast dense reconstruction from 360° video images"***
 
@@ -8,33 +30,55 @@ First it supports the equirectangular camera model while other solutions are lim
 
 **Keywords**: PatchMatch-Stereo, 360°-Panorama, visual monocular SLAM, UAV, Rescue Robotics
 
-## Videos (at youtube):
 
-Dense mapping of a rescue indoor environment (after a fire) with a UAV (+ 360°) camera, Essen: Feb. 2022
-* [![Essen](./images/vid-thumb-3.png)](https://www.youtube.com/watch?v=joXGfIUy2mc "Essen point cloud generation")
+## Usage:
+### Requirements
+* <a href="https://github.com/NVIDIA/nvidia-docker">NVIDIA Container Toolkit</a>
+### Build
+```
+docker build -t pmdvslam --build-arg NUM_THREADS=$(nproc) .
+```
+### Run
+* Start Container
+```
+xhost +local:
+nvidia-docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix:ro -v /HOST/DATA/PATH:/data pmdvslam
+```
+* Run VSLAM (press "Terminate" to export and exit)
+```
+./run_video_slam -v /PATH/TO/ORB_VOCAB.dbow2 -c /PATH/TO/CONFIG.yaml -m /PATH/TO/VIDEO [--mask /PATH/TO/MASK] [-p /PATH/TO/DATABASE.msg]
+```
+* Export .msg to .ply (already included in normal .msg export)
+```
+python3 ../export_dense_msg_to_ply.py -i /PATH/TO/FILE.msg_dense -o /PATH/TO/OUTPUT.ply
+```
+### Realtime Demo
+* Start Container and mount this repository as docker volume to /data
+* Run Demo
+```
+./run_video_slam -v /data/orb_vocab/orb_vocab.dbow2 -c /data/example/patchmatch/config.yaml -m /data/example/patchmatch/video.mp4 --mask /data/example/patchmatch/mask.png -p /data/example/patchmatch/output.msg --frame-skip 2 --no-sleep
+```
 
-High quality version of the video submitted to the ssrr 2022: Dense mapping of a tube at DRZ with a 360° camera at a FPV UAV. High quality video submitted to the ssrr2022. OpenVSLAM + gpu PatchMatch for 360° cameras.
-* [![TubeDRZ](./images/vid-thumb-6.png)](https://www.youtube.com/watch?v=ybpNvSNzGto " Tube mapping DRZ")
+## Videos:
 
-Deployment of Aerial Robots after a major fire of an industrial hall with hazardous substances, Berlin: Feb. 2021. started at 3:00
-* [![3D point cloud DRZ](./images/vid-thumb-5.png)](https://www.youtube.com/watch?v=mR05-akD4BE&t=180s "Point cloud generation of an burned industrial hall")
+* [Dense mapping of a rescue indoor environment (after a fire) with a UAV (+ 360°) camera, Essen: Feb. 2022](https://www.youtube.com/watch?v=joXGfIUy2mc)
 
-360° View of a short flight through a rescue environment (after a fire) with a DJI FPV and a Insta360 One X, Essen Feb. 2022. Quality is reduced from 5.7 K to 2 K (HD).
-* [![Essen360](./images/vid-thumb-1.png)](https://www.youtube.com/watch?v=Pd2__gm0nUE "Essen flight 2 Minutes 360")
+* [High quality version of the video submitted to the ssrr 2022: Dense mapping of a tube at DRZ with a 360° camera at a FPV UAV. High quality video submitted to the ssrr2022. OpenVSLAM + gpu PatchMatch for 360° cameras.](https://www.youtube.com/watch?v=ybpNvSNzGto)
 
-3D point cloud of a rescue environment (after a fire). Essen Feb. 2022,  OpenVSLAM + cuda implementation of PatchMatch with equirectangular projection (360°). Interesting at 1:15
-* [![Essenpcl](./images/vid-thumb-2.png)](https://www.youtube.com/watch?v=mhlxL7Xpauc&t=75s "Essen dense point cloud")
+* [Deployment of Aerial Robots after a major fire of an industrial hall with hazardous substances, Berlin: Feb. 2021.](https://www.youtube.com/watch?v=mR05-akD4BE&t=180s)
 
-Dense mapping of a rescue env. in real time with a 360° camera on a small first-person view drone. Watch out the localization and mapping in the tubes!
-* [![DRZMapping](./images/vid-thumb-4.png)](https://www.youtube.com/watch?v=_xzITKJRyek "DRZ mapping")
+* [360° View of a short flight through a rescue environment (after a fire) with a DJI FPV and a Insta360 One X, Essen Feb. 2022. Quality is reduced from 5.7 K to 2 K (HD).](https://www.youtube.com/watch?v=Pd2__gm0nUE)
 
-360° Indoor panorama viewer based on the localization (similar to streetview). Red points a near blue point a far away. Essen Feb. 2022
-* [![EssenStreetview](./images/vid-thumb-7.png)](https://www.youtube.com/watch?v=iFE1kWW_jM4 "Essen 360 view")
+* [3D point cloud of a rescue environment (after a fire). Essen Feb. 2022,  OpenVSLAM + cuda implementation of PatchMatch with equirectangular projection (360°).](https://www.youtube.com/watch?v=mhlxL7Xpauc&t=75s)
+
+* [Dense mapping of a rescue env. in real time with a 360° camera on a small first-person view drone. Watch out the localization and mapping in the tubes!](https://www.youtube.com/watch?v=_xzITKJRyek)
+
+* [360° Indoor panorama viewer based on the localization (similar to streetview). Red points a near blue point a far away. Essen Feb. 2022](https://www.youtube.com/watch?v=iFE1kWW_jM4)
 
 ## Cite:
 Hartmut Surmann, Marc Thurow, Dominik Slomma: 
 **PatchMatch-Stereo-Panorama, a fast dense reconstruction from 360° video images**, 7 / 2022
 
-## Credits: 
-* OrbSLAM https://github.com/raulmur/ORB_SLAM2
-* OpenVSLAM https://dl.acm.org/doi/10.1145/3530839.3530849
+## Credits:
+* <a href="https://arxiv.org/abs/1610.06475">OrbSLAM</a>
+* <a href="https://arxiv.org/abs/1910.01122">OpenVSLAM</a>
