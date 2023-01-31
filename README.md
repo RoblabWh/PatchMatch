@@ -54,12 +54,17 @@ python3 ./export_dense_msg_to_ply.py -i /PATH/TO/FILE.msg_dense -o /PATH/TO/OUTP
 ```
 ### Realtime Demo
 * Start Container and mount this repository as docker volume to /data
+```
+cd ~/PatchMatch
+xhost +local:
+nvidia-docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix:ro -v ${PWD}:/data pmdvslam
+```
 * Run Demo
 ```
 ./run_video_slam -v /data/orb_vocab/orb_vocab.dbow2 -c /data/example/patchmatch/config.yaml -m /data/example/patchmatch/video.mp4 --mask /data/example/patchmatch/mask.png -p /data/example/patchmatch/output.msg --frame-skip 2 --no-sleep
 ```
 
-## Videos:
+## Application Videos:
 
 * [Dense mapping of a rescue indoor environment (after a fire) with a UAV (+ 360°) camera, Essen: Feb. 2022](https://www.youtube.com/watch?v=joXGfIUy2mc)
 
