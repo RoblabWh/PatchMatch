@@ -16,7 +16,7 @@
 	<strong>Dominik Slomma</strong>
 </p>
 <h3 align="center">
-	<a href="https://arxiv.org/abs/2211.16266">Paper</a> [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.18914.svg)]([[http://dx.doi.org/10.5281/zenodo.18914](https://ieeexplore.ieee.org/document/10018698)](https://ieeexplore.ieee.org/document/10018698))
+	<a href="https://arxiv.org/abs/2211.16266">Paper (arXiv)</a> [doi](https://doi/com/10.1109/SSRR56537.2022.10018698)
 </h3>
 <p align="center">
 	<img src="images/demo.gif" alt="" width="75%">
