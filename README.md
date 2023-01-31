@@ -50,7 +50,7 @@ nvidia-docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix/:/tmp/.X11-unix
 ```
 * Export .msg to .ply (already included in normal .msg export)
 ```
-python3 ../export_dense_msg_to_ply.py -i /PATH/TO/FILE.msg_dense -o /PATH/TO/OUTPUT.ply
+python3 ./export_dense_msg_to_ply.py -i /PATH/TO/FILE.msg_dense -o /PATH/TO/OUTPUT.ply
 ```
 ### Realtime Demo
 * Start Container and mount this repository as docker volume to /data
@@ -76,8 +76,15 @@ python3 ../export_dense_msg_to_ply.py -i /PATH/TO/FILE.msg_dense -o /PATH/TO/OUT
 * [360° Indoor panorama viewer based on the localization (similar to streetview). Red points a near blue point a far away. Essen Feb. 2022](https://www.youtube.com/watch?v=iFE1kWW_jM4)
 
 ## Cite:
-Hartmut Surmann, Marc Thurow, Dominik Slomma: 
-**PatchMatch-Stereo-Panorama, a fast dense reconstruction from 360° video images**, 7 / 2022
+@INPROCEEDINGS{10018698,
+  author={Surmann, Hartmut and Thurow, Marc and Slomma, Dominik},
+  booktitle={2022 IEEE International Symposium on Safety, Security, and Rescue Robotics (SSRR)}, 
+  title={PatchMatch-Stereo-Panorama, a fast dense reconstruction from 360° video images}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={366-372},
+  doi={10.1109/SSRR56537.2022.10018698}}
 
 ## Credits:
 * <a href="https://arxiv.org/abs/1610.06475">OrbSLAM</a>
