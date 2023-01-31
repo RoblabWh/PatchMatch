@@ -38,6 +38,8 @@ First it supports the equirectangular camera model while other solutions are lim
 * <a href="https://github.com/NVIDIA/nvidia-docker">NVIDIA Container Toolkit</a>
 ### Build
 ```
+git clone https://github.com/RoblabWh/PatchMatch
+cd ~/PathMatch
 docker build -t pmdvslam --build-arg NUM_THREADS=$(nproc) .
 ```
 ### Run
