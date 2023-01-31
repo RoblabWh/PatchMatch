@@ -14,6 +14,8 @@
 	<strong>Marc Thurow</strong>
 	·
 	<strong>Dominik Slomma</strong>
+	·
+	<strong>Niklas Digakis</strong>
 </p>
 <h3 align="center">
 	<a href="https://arxiv.org/abs/2211.16266">Paper (arXiv)</a> [doi](https://doi.org/10.1109/SSRR56537.2022.10018698)
