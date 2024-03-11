@@ -17,6 +17,12 @@
 	·
 	<strong>Niklas Digakis</strong>
 </p>
+
+<p align="center">
+	⚠️PLEASE NOTE⚠️: This software version is no longer under development.
+	<br>The successor can be found at: <a href="https://github.com/RoblabWh/stella_vslam_dense">stella_vslam_dense</a> ⬅️
+</p>
+
 <h3 align="center">
 	<a href="https://arxiv.org/abs/2211.16266">Paper (arXiv)</a> [doi](https://doi.org/10.1109/SSRR56537.2022.10018698)
 </h3>
